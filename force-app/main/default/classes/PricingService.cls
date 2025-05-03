@@ -34,10 +34,7 @@ public class PricingService extends commercestorepricing.PricingService {
           PriceDataFromExternalService dataFromExternalService = pricesFromExternalService.get(productId);
           commercestorepricing.PricingResponseItem responseItem = new commercestorepricing.PricingResponseItem(
               productId,
-              null,
-              null,
-              dataFromExternalService.getPrice(), // Use the single price
-              dataFromExternalService.getPrice()  // Use the same price for both list and unit price
+              dataFromExternalService.getPrice()
           );
           response.addPricingResponseItem(responseItem);
           
