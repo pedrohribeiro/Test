@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
+# Configuração da Organização Salesforce
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Credenciais de Acesso
 
-## How Do You Plan to Deploy Your Changes?
+- **Login:** pedrohenrique401472@agentforce.com
+- **Senha:** EverymindTeste123
+- **URL de Login:** [login.salesforce.com](https://login.salesforce.com)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Configurações do Objeto Account
 
-## Configure Your Salesforce DX Project
+### Campos Criados
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+1. **External ID**
+   - Tipo: Texto
+   - Descrição: Campo para armazenar um identificador externo único para a conta.
 
-## Read All About It
+2. **CNPJ**
+   - Tipo: Texto
+   - Descrição: Campo para armazenar o CNPJ da conta.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### Regra de Validação
+
+- **Nome da Regra:** CNPJ_Format_Validator
+- **Descrição:** Garante que o CNPJ inserido no campo CNPJ esteja em um formato válido.
